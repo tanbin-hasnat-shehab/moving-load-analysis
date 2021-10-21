@@ -3,25 +3,30 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
 
 
-<button onclick="btn_l()">Draw_member</button>
-<button onclick="sup_fixed()">fixed support</button>
+<button onclick="btn_l()" class="btn btn-outline-dark">Draw_member</button>
+<button onclick="sup_fixed()" class="btn btn-outline-dark">fixed support</button>
 
-<button onclick="sup_hinged()">hinged support</button>
+<button onclick="sup_hinged()" class="btn btn-outline-dark">hinged support</button>
 
 
-<button onclick="json_form()" id='over_btn'>Save</button>
+<button onclick="json_form()" id='over_btn' class="btn btn-outline-dark">Save</button>
 <input type="number" id='grid_spaces'value=50>
 <input type="text" id='type_op_st'value="beam">
 <input type="text" id='json_in' >
 
 <label style="font-size:30px" id='header'></label>
 
-
+<style type="text/css">
+  
+</style>
 
 
 <div id="canvasContainer" onclick="point_it(event)" onmousemove ="show_ord(event)">
@@ -78,6 +83,9 @@ function json_form(){
 var grid_spacing=50;
 var mathCanvas = document.getElementById("canvas");
 var ctx = mathCanvas.getContext("2d");
+//ctx.globalCompositeOperation = 'destination-over'
+ctx.fillStyle = "#FDFBE3";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
     
 draw_defaults();
 function draw_defaults(){
