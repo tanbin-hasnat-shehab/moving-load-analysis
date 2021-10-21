@@ -6,7 +6,6 @@ import math
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
-import plotly.express as px
 import json
 
 def my_html(html_file,width=2000,height=200):
